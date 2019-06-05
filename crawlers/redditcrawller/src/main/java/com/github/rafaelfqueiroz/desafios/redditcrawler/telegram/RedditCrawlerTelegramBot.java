@@ -13,6 +13,7 @@ import com.github.rafaelfqueiroz.desafios.redditcrawler.properties.CrawlerProper
 import com.github.rafaelfqueiroz.desafios.redditcrawler.properties.TelegramProperties;
 import com.github.rafaelfqueiroz.desafios.redditcrawler.service.SubRedditCrawlerService;
 import com.github.rafaelfqueiroz.desafios.redditcrawler.telegram.exception.InvalidTelegramCommandException;
+import com.github.rafaelfqueiroz.desafios.redditcrawler.telegram.exception.TelegramCrawlerException;
 import com.github.rafaelfqueiroz.desafios.redditcrawler.util.RedditNameRetriever;
 import com.github.rafaelfqueiroz.desafios.redditcrawler.util.SubredditFromNamesParser;
 import com.github.rafaelfqueiroz.desafios.redditcrawler.writer.TelegramSubredditWriter;
@@ -40,7 +41,7 @@ public class RedditCrawlerTelegramBot extends TelegramLongPollingBot {
 			
 			service.executeSteps(subReddits, new TelegramSubredditWriter((s) -> sendMessage(update, s)));
 			
-		} catch (InvalidTelegramCommandException e) {
+		} catch (TelegramCrawlerException e) {
 			sendMessage(update, e.getMessage());
 		} catch (Exception e) {
 			e.printStackTrace();
