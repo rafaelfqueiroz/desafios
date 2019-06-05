@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.github.rafaelfqueiroz.desafios'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.telegram:telegrambots:4.3'
+
+	implementation 'org.seleniumhq.selenium:selenium-chrome-driver:3.12.0'
+	implementation 'org.seleniumhq.selenium:selenium-server:3.141.59'
+	implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+	
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
