@@ -1,4 +1,4 @@
-#Plugin de Strings
+# Plugin de Strings
 
 Este projeto consiste na resolução do desafio IdWall para plugin de strings.
 
