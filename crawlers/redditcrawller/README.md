@@ -1,4 +1,4 @@
-#Reddit Crawler
+# Reddit Crawler
 
 Este projeto consiste na resolução do desafio IdWall para crawler do reddit.
 
